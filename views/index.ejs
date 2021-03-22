@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link type="text/css" href="/skin/jquery-ui/jquery-ui.min.css" rel="Stylesheet" />
+<link type="text/css" href="/skin/jquery-ui/jquery-ui.theme.min.css" rel="Stylesheet" />
+<link type="text/css" href="/skin/taskbar.css" rel="Stylesheet" />
+<script type="text/javascript" src="/skin/jquery-ui/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="/skin/jquery-ui/jquery-ui.min.js"></script>
+<script>
+  var jk = jQuery.noConflict();
+  jk(function() {
+  jk( "#kiwixsearchbox" ).autocomplete({
+
+  source: "/suggest?content=",
+  dataType: "json",
+  cache: false,
+
+  select: function(event, ui) {
+  jk( "#kiwixsearchbox" ).val(ui.item.value);
+  jk( "#kiwixsearchform" ).submit();
+  },
+
+  });
+  });
+
+  /* cybook hack */
+  if (navigator.userAgent.indexOf("bookeen/cybook") != -1) {
+  	jk("html").addClass("cybook");
+  }
+</script>
+<script type="text/javascript" src="/skin/taskbar.js" async></script>
+
+  <meta charset="UTF-8" />
+  <title>Welcome to Kiwix Server</title>
+  <style>
+        body {
+
+                background-color:#f7f7f7;
+                background-size:16px 16px;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1100px;
+                padding-top: 25px;
+        }
+        .book__list { text-align: center; }
+        .book {
+                display: inline-block; vertical-align: bottom; margin: 12px; padding: 20px 20px; width: 300px;
+                 border-radius: 8px;
+                text-align: left; color: #000; font-family: sans-serif; font-size: 13px;
+                background-color:#ffffff;
+                box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.04);
+        }
+        .book:hover {
+              box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086)
+;
+
+        }
+        .book__background { background-repeat: no-repeat; background-size: 48px 48px; background-position: top right; }
+        .book__title {
+                padding: 0 55px 0 0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+                font-size: 18px; color: #0645ad; line-height: 1em;
+        }
+        .book__description {
+                padding: 5px 55px 5px 0px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+                font-size: 15px; line-height: 1em;
+        }
+        .book__info { color: #777; font-weight: bold; font-size: 13px; line-height: 1em; }
+
+
+
+  /*      Extras css        */
+
+
+        .kiwix .book__list{
+            margin-top: 25px;
+        }
+
+.search-container {
+    text-align: center;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+input#search-bar {
+  margin: 0 auto;
+  width: 80%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+
+    background-image: url("/img/search.png");
+    background-repeat: no-repeat;
+    background-position: 95% 10px;
+}
+input#search-bar:focus {
+  border: 1px solid black;
+  transition: 0.35s ease;
+  color: black;
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.search-icon {
+
+}
+
+  </style>
+</head>
+<body class="kiwix">
+<div class="header">
+    <form class="search-container" method="get" action="/search">
+    <input type="text" id="search-bar" placeholder="Search for all available articles">
+  </form>
+</div>
+
+<div class="kiwix">
+  <div class='book__list'>
+    <a href="/wikipedia_lt_all_mini_2021-02"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Vikipedija'>Vikipedija</div>
+          <div class='book__description' title='offline Vikipedijos versija lietuvių kalba'>offline Vikipedijos versija lietuvių kalba</div>
+          <div class='book__info'>200,949 articles, 14 medias</div>
+        </div>
+    </div></a>
+    <a href="/ted_en_playlist-how-to-run-a-company-like-a-vi_2021-01"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='How to run a company like a visionary'>How to run a company like a visionary</div>
+          <div class='book__description' title='Learn from future-thinking CEOs, entrepreneurs and business experts about cutting-edge tactics to keep your organization one step ahead.'>Learn from future-thinking CEOs, entrepreneurs and business experts about cutting-edge tactics to keep your organization one step ahead.</div>
+          <div class='book__info'>9 articles, 5 medias</div>
+        </div>
+    </div></a>
+    <a href="/phet_zh-cn_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='PhET Interactive Simulations'>PhET Interactive Simulations</div>
+          <div class='book__description' title='Interactive simulations for Science and Math'>Interactive simulations for Science and Math</div>
+          <div class='book__info'>87 articles, 88 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikipedia_bjn_all_maxi_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Wikipidia'>Wikipidia</div>
+          <div class='book__description' title='offline version of Wikipedia in Banjar'>offline version of Wikipedia in Banjar</div>
+          <div class='book__info'>3,586 articles, 1 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikibooks_fa_all_maxi_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='ویکی‌کتاب'>ویکی‌کتاب</div>
+          <div class='book__description' title='ویکی‎کتاب، کتابخانهٔ آزاد'>ویکی‎کتاب، کتابخانهٔ آزاد</div>
+          <div class='book__info'>4,091 articles, 1 medias</div>
+        </div>
+    </div></a>
+    <a href="/ted_en_playlist-diane-von-furstenberg-s-5-favo_2021-01"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Diane von Furstenberg&apos;s 4 favorite TED Talks'>Diane von Furstenberg&apos;s 4 favorite TED Talks</div>
+          <div class='book__description' title='The legendary fashion designer — who created the wrap dress and remains an icon in the industry (she&apos;s also President of the Council of Fashion Designers of America) — picks the 5 TED talks that have inspired her most.'>The legendary fashion designer — who created the wrap dress and remains an icon in the industry (she&apos;s also President of the Council of Fashion Designers of America) — picks the 5 TED talks that have inspired her most.</div>
+          <div class='book__info'>6 articles, 5 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikisource_vi_all_nopic_2021-02"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Wikisource'>Wikisource</div>
+          <div class='book__description' title='Văn thư lưu trữ mở Wikisource'>Văn thư lưu trữ mở Wikisource</div>
+          <div class='book__info'>17,802 articles, 15 medias</div>
+        </div>
+    </div></a>
+    <a href="/ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Maestros, if you please ... !'>Maestros, if you please ... !</div>
+          <div class='book__description' title='These extraordinary maestros bring you into the world of writing and conducting music.'>These extraordinary maestros bring you into the world of writing and conducting music.</div>
+          <div class='book__info'>12 articles, 5 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikipedia_es_computer_nopic_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Equipo por Wikipedia'>Equipo por Wikipedia</div>
+          <div class='book__description' title='Una selección de artículos de Wikipedia en el ordenador'>Una selección de artículos de Wikipedia en el ordenador</div>
+          <div class='book__info'>12,257 articles, 14 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
+          <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
+          <div class='book__info'>4,390 articles, 1 medias</div>
+        </div>
+    </div></a>
+        </div>
+</div>
+
+<div id="kiwixfooter">
+  Powered by <a href="https://kiwix.org">Kiwix</a>
+</div>
+
+</body>
+</html>
