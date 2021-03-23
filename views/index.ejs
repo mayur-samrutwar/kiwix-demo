@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><link type="text/css" href="/skin/jquery-ui/jquery-ui.min.css" rel="Stylesheet" />
-<link type="text/css" href="/skin/jquery-ui/jquery-ui.theme.min.css" rel="Stylesheet" />
-<link type="text/css" href="/skin/taskbar.css" rel="Stylesheet" />
-<script type="text/javascript" src="/skin/jquery-ui/external/jquery/jquery.js"></script>
-<script type="text/javascript" src="/skin/jquery-ui/jquery-ui.min.js"></script>
-<script>
+<head>
+    <script>
   var jk = jQuery.noConflict();
   jk(function() {
   jk( "#kiwixsearchbox" ).autocomplete({
@@ -95,7 +91,6 @@ input#search-bar {
   font-size: 1rem;
   border: 1px solid #D0CFCE;
   outline: none;
-
     background-image: url("/img/search.png");
     background-repeat: no-repeat;
     background-position: 95% 10px;
@@ -118,13 +113,37 @@ input#search-bar:focus:-ms-placeholder {
   opacity: 0;
 }
 
-.search-icon {
+#logo{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: auto;
+}
 
+
+.header{
+    margin-top: 50px;
+}
+#kiwixfooter{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    vertical-align: baseline;
+}
+
+#footer__logo{
+    height: 20px;
+    width: auto;
 }
 
   </style>
 </head>
 <body class="kiwix">
+
+<div class="navbar__top">
+  <img src="/img/kiwix-logo.png" id="logo">
+</div>
+
 <div class="header">
     <form class="search-container" method="get" action="/search">
     <input type="text" id="search-bar" placeholder="Search for all available articles">
@@ -203,11 +222,47 @@ input#search-bar:focus:-ms-placeholder {
           <div class='book__info'>4,390 articles, 1 medias</div>
         </div>
     </div></a>
+      <a href="/wikisource_vi_all_nopic_2021-02"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Wikisource'>Wikisource</div>
+          <div class='book__description' title='Văn thư lưu trữ mở Wikisource'>Văn thư lưu trữ mở Wikisource</div>
+          <div class='book__info'>17,802 articles, 15 medias</div>
+        </div>
+    </div></a>
+    <a href="/ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Maestros, if you please ... !'>Maestros, if you please ... !</div>
+          <div class='book__description' title='These extraordinary maestros bring you into the world of writing and conducting music.'>These extraordinary maestros bring you into the world of writing and conducting music.</div>
+          <div class='book__info'>12 articles, 5 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikipedia_es_computer_nopic_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Equipo por Wikipedia'>Equipo por Wikipedia</div>
+          <div class='book__description' title='Una selección de artículos de Wikipedia en el ordenador'>Una selección de artículos de Wikipedia en el ordenador</div>
+          <div class='book__info'>12,257 articles, 14 medias</div>
+        </div>
+    </div></a>
+    <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
+          <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
+          <div class='book__info'>4,390 articles, 1 medias</div>
+        </div>
+    </div></a>
+      <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+        <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
+          <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
+          <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
+          <div class='book__info'>4,390 articles, 1 medias</div>
+        </div>
+    </div></a>
+
         </div>
 </div>
 
 <div id="kiwixfooter">
-  Powered by <a href="https://kiwix.org">Kiwix</a>
+  Powered by <a href="https://kiwix.org"><img src="/img/kiwix-logo.png" id="footer__logo"></a>
 </div>
 
 </body>
