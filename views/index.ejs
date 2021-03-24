@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script>
   var jk = jQuery.noConflict();
   jk(function() {
@@ -36,6 +38,7 @@
                 margin-right: auto;
                 max-width: 1100px;
                 padding-top: 25px;
+            font-family: 'Roboto', sans-serif;
         }
         .book__list { text-align: center; }
         .book {
@@ -136,6 +139,65 @@ input#search-bar:focus:-ms-placeholder {
     width: auto;
 }
 
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+    margin: auto;
+    top:25%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+.left__content{
+    width: 30%;
+    float: left;
+    margin-top: 5%;
+    background-color: #f7f7f7;
+
+}
+
+.right__content{
+    margin-left: 30%;
+}
+
+
   </style>
 </head>
 <body class="kiwix">
@@ -152,105 +214,125 @@ input#search-bar:focus:-ms-placeholder {
 
 <div class="kiwix">
   <div class='book__list'>
-    <a href="/wikipedia_lt_all_mini_2021-02"><div class='book'>
+    <a href="#wikipedia_lt_all_mini_2021-02"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Vikipedija'>Vikipedija</div>
           <div class='book__description' title='offline Vikipedijos versija lietuvių kalba'>offline Vikipedijos versija lietuvių kalba</div>
           <div class='book__info'>200,949 articles, 14 medias</div>
         </div>
     </div></a>
-    <a href="/ted_en_playlist-how-to-run-a-company-like-a-vi_2021-01"><div class='book'>
+
+    <div id="wikipedia_lt_all_mini_2021-02" class="overlay">
+	    <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <div class="left__content">
+                    <img src="https://img.icons8.com/ios/50/000000/green-earth.png">
+                </div>
+                <div class="right__content">
+                    <p style="padding: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed mi at nisl pretium semper. Maecenas fermentum leo ut mi dictum,
+                        et accumsan diam bibendum. Sed posuere quis sem et semper. Aliquam lobortis dui quis odio congue, at bibendum lorem mattis.
+                        Etiam commodo nibh erat, tempor ultricies tellus luctus et.
+                    </p>
+                </div>
+            </div>
+	    </div>
+    </div>
+
+
+    <a href="#ted_en_playlist-how-to-run-a-company-like-a-vi_2021-01"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='How to run a company like a visionary'>How to run a company like a visionary</div>
           <div class='book__description' title='Learn from future-thinking CEOs, entrepreneurs and business experts about cutting-edge tactics to keep your organization one step ahead.'>Learn from future-thinking CEOs, entrepreneurs and business experts about cutting-edge tactics to keep your organization one step ahead.</div>
           <div class='book__info'>9 articles, 5 medias</div>
         </div>
     </div></a>
-    <a href="/phet_zh-cn_2021-03"><div class='book'>
+    <a href="#phet_zh-cn_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='PhET Interactive Simulations'>PhET Interactive Simulations</div>
           <div class='book__description' title='Interactive simulations for Science and Math'>Interactive simulations for Science and Math</div>
           <div class='book__info'>87 articles, 88 medias</div>
         </div>
     </div></a>
-    <a href="/wikipedia_bjn_all_maxi_2021-03"><div class='book'>
+    <a href="#wikipedia_bjn_all_maxi_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Wikipidia'>Wikipidia</div>
           <div class='book__description' title='offline version of Wikipedia in Banjar'>offline version of Wikipedia in Banjar</div>
           <div class='book__info'>3,586 articles, 1 medias</div>
         </div>
     </div></a>
-    <a href="/wikibooks_fa_all_maxi_2021-03"><div class='book'>
+    <a href="#wikibooks_fa_all_maxi_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='ویکی‌کتاب'>ویکی‌کتاب</div>
           <div class='book__description' title='ویکی‎کتاب، کتابخانهٔ آزاد'>ویکی‎کتاب، کتابخانهٔ آزاد</div>
           <div class='book__info'>4,091 articles, 1 medias</div>
         </div>
     </div></a>
-    <a href="/ted_en_playlist-diane-von-furstenberg-s-5-favo_2021-01"><div class='book'>
+    <a href="#ted_en_playlist-diane-von-furstenberg-s-5-favo_2021-01"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Diane von Furstenberg&apos;s 4 favorite TED Talks'>Diane von Furstenberg&apos;s 4 favorite TED Talks</div>
           <div class='book__description' title='The legendary fashion designer — who created the wrap dress and remains an icon in the industry (she&apos;s also President of the Council of Fashion Designers of America) — picks the 5 TED talks that have inspired her most.'>The legendary fashion designer — who created the wrap dress and remains an icon in the industry (she&apos;s also President of the Council of Fashion Designers of America) — picks the 5 TED talks that have inspired her most.</div>
           <div class='book__info'>6 articles, 5 medias</div>
         </div>
     </div></a>
-    <a href="/wikisource_vi_all_nopic_2021-02"><div class='book'>
+    <a href="#wikisource_vi_all_nopic_2021-02"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Wikisource'>Wikisource</div>
           <div class='book__description' title='Văn thư lưu trữ mở Wikisource'>Văn thư lưu trữ mở Wikisource</div>
           <div class='book__info'>17,802 articles, 15 medias</div>
         </div>
     </div></a>
-    <a href="/ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
+    <a href="#ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Maestros, if you please ... !'>Maestros, if you please ... !</div>
           <div class='book__description' title='These extraordinary maestros bring you into the world of writing and conducting music.'>These extraordinary maestros bring you into the world of writing and conducting music.</div>
           <div class='book__info'>12 articles, 5 medias</div>
         </div>
     </div></a>
-    <a href="/wikipedia_es_computer_nopic_2021-03"><div class='book'>
+    <a href="#wikipedia_es_computer_nopic_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Equipo por Wikipedia'>Equipo por Wikipedia</div>
           <div class='book__description' title='Una selección de artículos de Wikipedia en el ordenador'>Una selección de artículos de Wikipedia en el ordenador</div>
           <div class='book__info'>12,257 articles, 14 medias</div>
         </div>
     </div></a>
-    <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+    <a href="#wikipedia_es_geography_maxi_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
           <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
           <div class='book__info'>4,390 articles, 1 medias</div>
         </div>
     </div></a>
-      <a href="/wikisource_vi_all_nopic_2021-02"><div class='book'>
+      <a href="#wikisource_vi_all_nopic_2021-02"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Wikisource'>Wikisource</div>
           <div class='book__description' title='Văn thư lưu trữ mở Wikisource'>Văn thư lưu trữ mở Wikisource</div>
           <div class='book__info'>17,802 articles, 15 medias</div>
         </div>
     </div></a>
-    <a href="/ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
+    <a href="#ted_en_playlist-maestros-if-you-please_2021-01"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Maestros, if you please ... !'>Maestros, if you please ... !</div>
           <div class='book__description' title='These extraordinary maestros bring you into the world of writing and conducting music.'>These extraordinary maestros bring you into the world of writing and conducting music.</div>
           <div class='book__info'>12 articles, 5 medias</div>
         </div>
     </div></a>
-    <a href="/wikipedia_es_computer_nopic_2021-03"><div class='book'>
+    <a href="#wikipedia_es_computer_nopic_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Equipo por Wikipedia'>Equipo por Wikipedia</div>
           <div class='book__description' title='Una selección de artículos de Wikipedia en el ordenador'>Una selección de artículos de Wikipedia en el ordenador</div>
           <div class='book__info'>12,257 articles, 14 medias</div>
         </div>
     </div></a>
-    <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+    <a href="#wikipedia_es_geography_maxi_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
           <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
           <div class='book__info'>4,390 articles, 1 medias</div>
         </div>
     </div></a>
-      <a href="/wikipedia_es_geography_maxi_2021-03"><div class='book'>
+      <a href="#wikipedia_es_geography_maxi_2021-03"><div class='book'>
         <div class='book__background' style="background-image: url('https://img.icons8.com/ios/50/000000/green-earth.png');">
           <div class='book__title' title='Geografía por Wikipedia'>Geografía por Wikipedia</div>
           <div class='book__description' title='Una selección de artículos de Wikipedia sobre geografía'>Una selección de artículos de Wikipedia sobre geografía</div>
