@@ -11,6 +11,10 @@ app.use(express.static('public'));
 app.get("/", function (req, res){
     res.render("index");
 })
+
+app.get("/wikipedia_lt_all_mini_2021-02", function (req, res){
+    res.render("demo")
+})
 app.listen(PORT, function (){
     console.log("Server running on port ${PORT}");
 })

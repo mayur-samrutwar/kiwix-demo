@@ -180,23 +180,57 @@ input#search-bar:focus:-ms-placeholder {
   color: #333;
 }
 .popup .content {
-  max-height: 30%;
   overflow: auto;
 }
 
 
 .left__content{
     width: 30%;
+    height: 200px;
+    margin-top: 20px;
     float: left;
-    margin-top: 5%;
-    background-color: #f7f7f7;
+    position: absolute;
 
 }
 
 .right__content{
     margin-left: 30%;
+    line-height: 130%;
+    text-align: justify;
+    padding: 0 20px;
 }
 
+.right__btn{
+    position: relative;
+    font-size: 20px;
+    border: none;
+    top: 25%;
+    margin-top: 10px;
+    color: #fff;
+    width: 180px;
+}
+.right__btn:hover{
+    cursor: pointer;
+}
+.download__btn{
+    background-color: #090909;
+    padding: 10px 30px;
+}
+.open__btn{
+    border: 2px #090909 solid;
+    padding: 8px 36px;
+    background-color: #fff;
+    color: #090909;
+}
+.tags{
+    padding:20px 0;
+}
+.tag{
+    background-color: #e7e7e7;
+    color: black;
+    padding:10px 5px;
+    margin-right: 5px;
+}
 
   </style>
 </head>
@@ -224,17 +258,27 @@ input#search-bar:focus:-ms-placeholder {
 
     <div id="wikipedia_lt_all_mini_2021-02" class="overlay">
 	    <div class="popup">
+            <h2>Vikipedija</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
                 <div class="left__content">
-                    <img src="https://img.icons8.com/ios/50/000000/green-earth.png">
+                    <img src="https://img.icons8.com/ios/50/000000/green-earth.png"><br>
+                    <a href="/wikipedia_lt_all_mini_2021-02">
+                    <button class="right__btn open__btn">Open Page</button></a>
+                    <button class="right__btn download__btn">Download</button>
                 </div>
                 <div class="right__content">
-                    <p style="padding: 20px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed mi at nisl pretium semper. Maecenas fermentum leo ut mi dictum,
-                        et accumsan diam bibendum. Sed posuere quis sem et semper. Aliquam lobortis dui quis odio congue, at bibendum lorem mattis.
-                        Etiam commodo nibh erat, tempor ultricies tellus luctus et.
+                    <p style="padding: 0 10px">
+                        This is the example of long description paragraph, a organization may have.
+                        By the way, I'm Mayur Samrutwar doing by engineering from <b>National Institute of Technology, Nagpur (India)</b>.
+                        I'm on LinkedIn too, by the same name.
+                        If you have done reading this, there's a close button on the right top. Thank you.
                     </p>
+                    <div class="tags">
+                        <span class="tag">#wikipedia</span>
+                        <span class="tag">#lithuanian</span>
+                        <span class="tag">#200K+</span>
+                    </div>
                 </div>
             </div>
 	    </div>
